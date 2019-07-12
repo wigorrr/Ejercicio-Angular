@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+/*------------------------HEADER--------------------------*/
+
+/*------General y Mobile-----*/
+    
+header{
+    width:100%;
+}
+
+.logo-container{
+    width: 100%;
+    padding: 1.8% 0 1.7% 0;
+    position: relative;
+    display:inline-block;
+}
+
+.logo-container img:first-child{
+    position:relative;
+    left:38%;
+    width:25%;
+    margin: 0 auto;
+    transition: transform 1s;
+}
+
+.logo-container img:nth-child(2){
+    position: absolute;
+    left:38%;
+    width:25%;
+    transition: transform 1s;
+    z-index:10000;
+}
+
+.logo-container img:nth-child(2):hover{
+    transform: rotate(45deg)
+}
+
+/*------Desktop-----*/
+
+@media (min-width:768px) {
+
+    header{
+        width:100%;
+    }
+
+    .logo-container{
+        text-align: center;
+        position: relative;
+    }
+
+    .logo-container img:first-child{
+        position:relative;
+        width:9%;
+        left:0;
+        margin: 0 auto;
+        transition: transform 1s;
+    }
+
+    .logo-container img:nth-child(2){
+        width:9%;
+        margin: 0 auto;
+        transition: transform 1s;
+        position: absolute;
+        left:45.5%;
+        z-index:10000;
+    }
+
+    .logo-container img:nth-child(2):hover{
+        transform: rotate(45deg)
+    }
+}
+
+
+/*------------------------NAV--------------------------*/
+
+/*------General y Mobile-----*/
+
+nav.desktop-nav{
+    display:none;
+}
+
+/*------Desktop-----*/
+
+@media (min-width:768px) {
+nav.desktop-nav{
+    display:block;
+    width:100%;
+    text-align: center;
+    box-shadow: 0 8px 10px -6px rgb(0, 0, 0);
+    padding:0 0 0.5vw 0;
+}
+
+nav.desktop-nav ul {
+    margin: 0;
+    padding: 1% 0 1% 0;
+}
+
+nav.desktop-nav ul li {
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    display: inline-block;
+    margin: 0 4vw;
+    padding: 0.2vw;
+    font-size: 0.95vw;
+    font-weight: 400;
+}
+
+nav.desktop-nav ul li.active {
+    padding-bottom: 0.2vw;
+    border-bottom: 0.25vw solid rgb(255, 217, 0);
+}
+
+nav.desktop-nav ul li a{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+}
+
+nav.desktop-nav ul li a:hover{
+    padding-bottom: 0.2vw;
+    border-bottom: 0.25vw solid rgb(255, 217, 0);
+}
+}
+
+
+/*------------------------MAIN--------------------------*/
+/*General y Mobile*/
+main{
+    padding: 0;
+    margin: 0;
+}
+
+form{
+    height:40vh;
+    padding: 40% 6% 40% 6%;
+    background-color: rgb(39, 39, 39);
+    box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.281);
+} 
+
+.form-group.ingreso, .form-group.egreso{
+    display: block;
+    width:97%;
+    margin-bottom:6%;
+}
+
+input{
+    width: 100%;
+    padding: 1%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8vw;
+    display: inline-block;
+    text-align: center;
+}
+
+button{
+    display: block;
+    width:100%;
+    margin: 0 auto 0 auto;
+    padding: 1% 5%;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(39, 39, 39);
+    font-size: 8vw;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+    text-align: center;
+    background-color: rgb(255, 196, 0);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius:0.5rem;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.form-group.ingreso{
+    margin-right:7%;
+}
+
+input::placeholder{
+    color: rgb(175, 175, 175);
+}
+
+button:hover{
+    background-color: rgb(255, 166, 0);
+    background-color: rgb(255, 196, 0);
+    transform: scale(1.04);
+}
+
+/*Desktop*/
+@media (min-width:768px) {
+    main{
+        padding: 0 0 12% 0;
+        margin: 0;
+    }
+    form{
+        height: fit-content;
+        padding: 10% 13% 6% 13%;
+    }
+    .form-group.ingreso, .form-group.egreso{
+        display: inline-block;
+        width:46%;
+        margin-bottom:6%;
+    }
+    input{
+        width: 100%;
+        padding: 1%;
+        font-size: 2vw;
+        display: inline-block;
+    }
+    button{
+        width:30%;
+        margin: 0 auto 0 auto;
+        padding: 1% 5%;
+        font-size: 1.7vw;
+        font-weight: 600;
+        letter-spacing: 0.1vw;
+        cursor: pointer;
+    }
+}
+
+
+/*---------------------FOOTER-------------------------*/
+
+/*General y Mobile*/
+
+footer{
+    width:100%;
+    height:100%;
+    padding: 12% 0 3% 0;
+    background-color:rgb(94, 94, 94);
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .col{
+    width:100%;
+    display: block;
+}
+
+footer .col ul{
+    padding-left:0;
+}
+
+footer ul li {
+    list-style: none;
+    font-weight: 200;
+    margin-bottom:1.5vw;
+    text-align: center;
+}
+
+footer ul li:first-child {
+    color:#fff;
+    font-weight: 400;
+    margin-top:10%;
+}
+
+footer ul li a{
+    font-size: 4.5vw;
+    text-decoration: none;
+    color:#fff;
+    letter-spacing: 0.1vw;
+    line-height: 6vw;
+}
+
+footer .col:nth-child(4) {
+    position: absolute;
+    text-align: center;
+}
+
+footer .col:nth-child(4) ul li:nth-child(2), footer .col:nth-child(4) ul li:nth-child(3), footer .col:nth-child(4) ul li:nth-child(4){
+    display: inline-block;
+    width:25%;
+}
+
+footer ul li a img{
+    width:50%;
+    margin-top:50%;
+    display:inline-block;
+}
+
+footer ul li:first-child {
+    font-weight: 600;
+    margin-bottom: 2%;
+}
+
+/*Desktop*/
+
+@media (min-width:768px) {
+
+    footer{
+        width: inherit;
+        height: fit-content;
+        padding: 4% 11% 3% 11%;
+    }
+
+    footer .col{
+        width:25%;
+        display: inline-block;
+    }
+
+    footer ul li {
+        text-align: left;
+        margin-bottom:0.25vw;
+    }
+
+    footer ul li:first-child {
+        margin-top:0;
+        font-size: 0.85vw;
+        letter-spacing: 0.05vw;
+    }
+
+    footer ul li a{
+        font-size: 0.8vw;
+        line-height: 2vw;
+    }
+
+    footer .col:nth-child(4) {
+        text-align: left;
+    }
+}
+
