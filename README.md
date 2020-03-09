@@ -1,2 +1,4 @@
 # Ejercicio-Angular
- Ejercicio de Conversión de moneda
+
+
+Practica para converion de divisas
